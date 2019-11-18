@@ -15,11 +15,6 @@ class ContactsTable extends Component
     public $sortAsc = true;
     public $perPage = 10;
 
-    public function search($query)
-    {
-        $this->query = $query;
-    }
-
     public function sortBy($field)
     {
         if ($this->sortField === $field) {
