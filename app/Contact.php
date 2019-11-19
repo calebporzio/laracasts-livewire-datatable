@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     protected $guarded = [];
+
     protected $casts = ['birthdate' => 'date'];
 
     public static function search($query)
