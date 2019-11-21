@@ -2,20 +2,21 @@
 
 namespace Tests\Feature;
 
+use App\Contact;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Livewire\Livewire;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $response = $this->get('/');
+    use RefreshDatabase;
 
-        $response->assertStatus(200);
+    /** @test */
+    function contacts_table_is_searchable()
+    {
+        factory(Contact::class)->create(['name' => 'foo']);
+        factory(Contact::class)->create(['name' => 'bar']);
+
+        //
     }
 }
