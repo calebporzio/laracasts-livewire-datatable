@@ -1,5 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'contacts' => \App\Contact::all(),
+    ]);
 });

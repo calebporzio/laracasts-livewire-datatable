@@ -8,7 +8,11 @@
     </head>
     <body>
         <div class="container pt-4">
-            <!--  -->
+            <input type="text" placeholder="Search...">
+
+            <ul>
+                @include('contacts-partial')
+            </ul>
         </div>
     </body>
 </html>
