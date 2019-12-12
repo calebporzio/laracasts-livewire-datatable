@@ -10,7 +10,7 @@ class ContactsTable extends Component
     use WithPagination;
 
     public $perPage = 10;
-    public $sortField;
+    public $sortField = 'id';
     public $sortAsc = true;
     public $search = '';
 
